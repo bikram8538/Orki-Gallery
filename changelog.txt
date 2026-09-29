@@ -1,7 +1,11 @@
+1.0.2
+- Renamed the admin page to About Orki Gallery.
+- Refocused the About page on Orki Gallery only.
+- Added developer credits for Kunal Debnath and Bikram Bagdi with GitHub links.
+- Added developer information to readme.txt and updated plugin author metadata.
+
 1.0.1
-- Added an About Orki page in WordPress admin.
-- Added Orki Gallery metadata and Orki Table Builder Pro companion-product details.
-- Added Orki and WordPress.org product links.
+- Added the first About page and plugin information panel.
 
 Orki Gallery Changelog
 

@@ -4,7 +4,7 @@ Tags: gallery, image gallery, photo gallery, elementor, masonry
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -45,27 +45,13 @@ Features:
 
 Orki Gallery always fills the width of its parent content container; the theme or page builder controls the parent width.
 
-Developed by Orki — https://orki.in/
+Product website: https://orki.in/
 
 
-== More from Orki ==
+== Developers ==
 
-= Orki Table Builder Pro =
-
-Create, style, and manage tables visually, then drop them anywhere with a shortcode or block.
-
-Current product details supplied for Orki Table Builder Pro:
-
-* Developed by Orki — https://orki.in/
-* Version 0.15.7
-* Requires WordPress 6.0 or later
-* Tested up to WordPress 7.1
-* Requires PHP 7.4 or later
-* GPLv2 or later
-
-Core capabilities include a spreadsheet-style visual editor, rich cell styling, Image and Link column types, CSV import, CSV/XLSX/PDF export, table categories, frontend sorting/search/pagination, fixed rows and columns, five responsive layouts, live preview, shortcode, and Gutenberg block support.
-
-WordPress.org: https://wordpress.org/plugins/orki-table-builder-pro/
+* Kunal Debnath — https://github.com/infronixdigital
+* Bikram Bagdi — https://github.com/bikram8538
 
 == Installation ==
 
@@ -113,11 +99,13 @@ No. The plugin does not include telemetry, analytics, account connections, or re
 
 == Changelog ==
 
+= 1.0.2 =
+* Renamed the admin page to About Orki Gallery and focused it entirely on the gallery plugin.
+* Added developer credits for Kunal Debnath and Bikram Bagdi with GitHub links.
+* Added a Developers section to readme.txt and updated plugin author metadata.
+
 = 1.0.1 =
-* Added an About Orki admin page with Orki Gallery product details.
-* Added a companion-product section for Orki Table Builder Pro using the supplied version 0.15.7 product information.
-* Added links to Orki and the Orki Table Builder Pro WordPress.org listing.
-* Added a More from Orki section to the plugin readme.
+* Added the first About page and plugin information panel.
 
 = 1.0.0 =
 * Production release candidate.

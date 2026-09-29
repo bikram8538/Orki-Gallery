@@ -26,7 +26,7 @@ final class Admin {
         add_submenu_page( 'orki-gallery', __( 'Galleries', 'orki-gallery' ), __( 'Galleries', 'orki-gallery' ), 'upload_files', 'orki-gallery', array( $this, 'dashboard' ) );
         add_submenu_page( 'orki-gallery', __( 'Add New Gallery', 'orki-gallery' ), __( 'Add New Gallery', 'orki-gallery' ), 'upload_files', 'orki-gallery-editor', array( $this, 'editor' ) );
         add_submenu_page( 'orki-gallery', __( 'Settings', 'orki-gallery' ), __( 'Settings', 'orki-gallery' ), 'manage_options', 'orki-gallery-settings', array( $this, 'settings' ) );
-        add_submenu_page( 'orki-gallery', __( 'About Orki', 'orki-gallery' ), __( 'About Orki', 'orki-gallery' ), 'upload_files', 'orki-gallery-about', array( $this, 'about' ) );
+        add_submenu_page( 'orki-gallery', __( 'About Orki Gallery', 'orki-gallery' ), __( 'About Orki Gallery', 'orki-gallery' ), 'upload_files', 'orki-gallery-about', array( $this, 'about' ) );
         add_submenu_page( null, __( 'Orki Gallery Setup', 'orki-gallery' ), __( 'Orki Gallery Setup', 'orki-gallery' ), 'manage_options', 'orki-gallery-setup', array( $this, 'setup_wizard' ) );
     }
 
@@ -310,22 +310,22 @@ final class Admin {
 
     public function about() {
         if ( ! current_user_can( 'upload_files' ) ) { wp_die( esc_html__( 'Permission denied.', 'orki-gallery' ) ); }
-        $this->page_header( __( 'About Orki', 'orki-gallery' ), __( 'WordPress tools from Orki, built around visual editing and simple publishing.', 'orki-gallery' ), false );
+        $this->page_header( __( 'About Orki Gallery', 'orki-gallery' ), __( 'A lightweight WordPress gallery builder created for a clear, visual publishing workflow.', 'orki-gallery' ), false );
         ?>
         <section class="orkigal-about-hero">
             <div class="orkigal-about-copy">
                 <span class="orkigal-kicker"><?php esc_html_e( 'ORKI GALLERY', 'orki-gallery' ); ?></span>
-                <h2><?php esc_html_e( 'A focused gallery builder for WordPress.', 'orki-gallery' ); ?></h2>
-                <p><?php esc_html_e( 'Create responsive image and video galleries visually, preview them before publishing, and place them with a shortcode, Gutenberg block, or Elementor widget.', 'orki-gallery' ); ?></p>
-                <div class="orkigal-about-actions"><a class="button button-primary orkigal-primary" href="<?php echo esc_url( 'https://orki.in/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Visit Orki', 'orki-gallery' ); ?> ↗</a><a class="button" href="<?php echo esc_url( admin_url( 'admin.php?page=orki-gallery-editor' ) ); ?>"><?php esc_html_e( 'Create a Gallery', 'orki-gallery' ); ?></a></div>
+                <h2><?php esc_html_e( 'Create galleries visually, then publish them anywhere.', 'orki-gallery' ); ?></h2>
+                <p><?php esc_html_e( 'Orki Gallery helps you build responsive image and video galleries with visual layouts, live preview, lightbox viewing, shortcode, Gutenberg, and Elementor support.', 'orki-gallery' ); ?></p>
+                <div class="orkigal-about-actions"><a class="button button-primary orkigal-primary" href="<?php echo esc_url( admin_url( 'admin.php?page=orki-gallery-editor' ) ); ?>"><?php esc_html_e( 'Create a Gallery', 'orki-gallery' ); ?></a><a class="button" href="<?php echo esc_url( 'https://orki.in/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Visit orki.in', 'orki-gallery' ); ?> ↗</a></div>
             </div>
-            <div class="orkigal-about-brand-card"><?php $this->brand(); ?><p><?php esc_html_e( 'Visual WordPress tools with a practical workflow.', 'orki-gallery' ); ?></p></div>
+            <div class="orkigal-about-brand-card"><?php $this->brand(); ?><p><?php esc_html_e( 'Responsive galleries with a simple WordPress-native workflow.', 'orki-gallery' ); ?></p></div>
         </section>
 
         <section class="orkigal-card orkigal-about-section">
             <div class="orkigal-about-section-head"><div><span class="orkigal-kicker"><?php esc_html_e( 'PLUGIN DETAILS', 'orki-gallery' ); ?></span><h2><?php esc_html_e( 'Orki Gallery', 'orki-gallery' ); ?></h2></div><span class="orkigal-version-badge">v<?php echo esc_html( ORKIGAL_VERSION ); ?></span></div>
             <div class="orkigal-meta-table">
-                <div><b><?php esc_html_e( 'Developed by', 'orki-gallery' ); ?></b><span><a href="<?php echo esc_url( 'https://orki.in/' ); ?>" target="_blank" rel="noopener noreferrer">Orki</a></span></div>
+                <div><b><?php esc_html_e( 'Product website', 'orki-gallery' ); ?></b><span><a href="<?php echo esc_url( 'https://orki.in/' ); ?>" target="_blank" rel="noopener noreferrer">orki.in</a></span></div>
                 <div><b><?php esc_html_e( 'Version', 'orki-gallery' ); ?></b><span><?php echo esc_html( ORKIGAL_VERSION ); ?></span></div>
                 <div><b><?php esc_html_e( 'Requires at least', 'orki-gallery' ); ?></b><span>6.0</span></div>
                 <div><b><?php esc_html_e( 'Tested up to', 'orki-gallery' ); ?></b><span>7.1</span></div>
@@ -334,27 +334,12 @@ final class Admin {
             </div>
         </section>
 
-        <section class="orkigal-card orkigal-about-section orkigal-companion-product">
-            <div class="orkigal-about-section-head"><div><span class="orkigal-kicker"><?php esc_html_e( 'MORE FROM ORKI', 'orki-gallery' ); ?></span><h2><?php esc_html_e( 'Orki Table Builder Pro', 'orki-gallery' ); ?></h2><p><?php esc_html_e( 'Create, style, and manage tables visually, then drop them anywhere with a shortcode or block.', 'orki-gallery' ); ?></p></div><span class="orkigal-version-badge">v0.15.7</span></div>
-            <div class="orkigal-meta-table compact">
-                <div><b><?php esc_html_e( 'Developed by', 'orki-gallery' ); ?></b><span><a href="<?php echo esc_url( 'https://orki.in/' ); ?>" target="_blank" rel="noopener noreferrer">Orki</a></span></div>
-                <div><b><?php esc_html_e( 'Requires at least', 'orki-gallery' ); ?></b><span>6.0</span></div>
-                <div><b><?php esc_html_e( 'Tested up to', 'orki-gallery' ); ?></b><span>7.1</span></div>
-                <div><b><?php esc_html_e( 'Requires PHP', 'orki-gallery' ); ?></b><span>7.4</span></div>
-                <div><b><?php esc_html_e( 'License', 'orki-gallery' ); ?></b><span><a href="<?php echo esc_url( 'https://www.gnu.org/licenses/gpl-2.0.html' ); ?>" target="_blank" rel="noopener noreferrer">GPLv2 or later</a></span></div>
-            </div>
-            <div class="orkigal-product-description">
-                <p><?php esc_html_e( 'Orki Table Builder Pro provides a visual, spreadsheet-like table editor in WordPress. It supports cell styling, images and links, table categories, CSV import, CSV/XLSX/PDF export, frontend search and pagination, fixed rows and columns, and multiple responsive table layouts.', 'orki-gallery' ); ?></p>
-            </div>
+        <section class="orkigal-card orkigal-about-section">
+            <div class="orkigal-about-section-head"><div><span class="orkigal-kicker"><?php esc_html_e( 'DEVELOPERS', 'orki-gallery' ); ?></span><h2><?php esc_html_e( 'Built by', 'orki-gallery' ); ?></h2><p><?php esc_html_e( 'The developers currently listed for Orki Gallery are:', 'orki-gallery' ); ?></p></div></div>
             <div class="orkigal-feature-grid">
-                <div><span class="dashicons dashicons-editor-table"></span><b><?php esc_html_e( 'Visual table editor', 'orki-gallery' ); ?></b><small><?php esc_html_e( 'Spreadsheet-style rows, columns, cell editing, resizing, sorting, and drag reordering.', 'orki-gallery' ); ?></small></div>
-                <div><span class="dashicons dashicons-admin-appearance"></span><b><?php esc_html_e( 'Rich styling controls', 'orki-gallery' ); ?></b><small><?php esc_html_e( 'Fonts, colors, borders, alignment, merged cells, conditional formatting, and rich HTML cells.', 'orki-gallery' ); ?></small></div>
-                <div><span class="dashicons dashicons-upload"></span><b><?php esc_html_e( 'Import & export', 'orki-gallery' ); ?></b><small><?php esc_html_e( 'CSV import from upload, URL, server file, or pasted data; export to CSV, XLSX, and PDF.', 'orki-gallery' ); ?></small></div>
-                <div><span class="dashicons dashicons-smartphone"></span><b><?php esc_html_e( 'Responsive layouts', 'orki-gallery' ); ?></b><small><?php esc_html_e( 'Horizontal Scroll, Accordion, Modal, Stack, and Flip layouts for smaller screens.', 'orki-gallery' ); ?></small></div>
-                <div><span class="dashicons dashicons-search"></span><b><?php esc_html_e( 'Frontend tools', 'orki-gallery' ); ?></b><small><?php esc_html_e( 'Sorting, search/filter, pagination, and fixed rows or columns.', 'orki-gallery' ); ?></small></div>
-                <div><span class="dashicons dashicons-shortcode"></span><b><?php esc_html_e( 'Easy embedding', 'orki-gallery' ); ?></b><small><?php esc_html_e( 'Live preview plus shortcode and Gutenberg block support.', 'orki-gallery' ); ?></small></div>
+                <div><span class="dashicons dashicons-admin-users"></span><b>Kunal Debnath</b><small><a href="<?php echo esc_url( 'https://github.com/infronixdigital' ); ?>" target="_blank" rel="noopener noreferrer">github.com/infronixdigital ↗</a></small></div>
+                <div><span class="dashicons dashicons-admin-users"></span><b>Bikram Bagdi</b><small><a href="<?php echo esc_url( 'https://github.com/bikram8538' ); ?>" target="_blank" rel="noopener noreferrer">github.com/bikram8538 ↗</a></small></div>
             </div>
-            <div class="orkigal-about-actions"><a class="button button-primary orkigal-primary" href="<?php echo esc_url( 'https://wordpress.org/plugins/orki-table-builder-pro/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'View Orki Table Builder Pro', 'orki-gallery' ); ?> ↗</a><a class="button" href="<?php echo esc_url( 'https://orki.in/' ); ?>" target="_blank" rel="noopener noreferrer"><?php esc_html_e( 'Visit orki.in', 'orki-gallery' ); ?> ↗</a></div>
         </section>
         <?php
         $this->page_footer();
