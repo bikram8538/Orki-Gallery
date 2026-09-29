@@ -1,0 +1,23 @@
+1.0.1
+- Added an About Orki page in WordPress admin.
+- Added Orki Gallery metadata and Orki Table Builder Pro companion-product details.
+- Added Orki and WordPress.org product links.
+
+Orki Gallery Changelog
+
+1.0.0
+- Production release candidate.
+- Gutenberg block for saved galleries.
+- Gallery dashboard pagination and duplication.
+- Improved carousel, slideshow, lightbox, accessibility, and responsive behavior.
+- Elementor styling controls and Orki category.
+- Safer opt-in uninstall data cleanup.
+
+0.3.0
+- Guided onboarding and three-step editor.
+
+0.2.0
+- Media multi-select, video selection, compact editor.
+
+0.1.0
+- Initial development release.
